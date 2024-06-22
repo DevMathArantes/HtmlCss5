@@ -1,0 +1,14 @@
+:root{
+    --CorPrincipal: #ffffff;
+    --CorSecundaria: #C0C0C0;
+    --CorBotao: #167bf7;
+    --CorFundo: #00030c;
+}
+body{
+    background-color: var(--CorFundo);
+    color: var(--CorPrincipal);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
