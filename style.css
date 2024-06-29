@@ -3,6 +3,9 @@
 Link com guia de classes e ids
 https://www.alura.com.br/artigos/qual-diferenca-entre-id-e-class
 
+Link sobre pseudo-classes
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes
+
 Novos atributos:
 
 Colocar immagem no background
@@ -39,6 +42,22 @@ Exemplos: "50% 50%", "33% 33% 33%", etc...
 Marcações de lista
 list-style-type:...;
 
+Ação enquanto clica
+x:active{...}
+x = elemento qualquer
+
+Ação ao selecionar
+x:focus{...}
+x= elemento qualquer
+
+Ação quando <a> ja foi visitado
+x:visited{...}
+x= elemento qualquer
+
+Ação quando <a> não foi visitado
+x:link{...}
+x= elemento qualquer
+
 */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -50,6 +69,7 @@ list-style-type:...;
     --CorFundo: #000000;
     --FontMaior: "Kanit", sans-serif;
     --FontPrincipal: "Inter", sans-serif;
+    --CorBotaoEfeito: #3c92fa;
 }
 body{
     background-color: var(--CorFundo);
@@ -84,7 +104,7 @@ body{
 }
 .principal{
     background-image: url(Assets/imgFundo1.jpg);
-    background-size:65%;
+    background-size:60%;
     background-position: right;
     background-repeat: no-repeat;
     align-items: center;
@@ -103,6 +123,10 @@ body{
     display: block;
     text-decoration: none;
     margin-bottom: 1em;
+}
+.containerBotao:hover{
+    background-color: var(--CorBotaoEfeito);
+    color: var(--CorFundo);
 }
 .containerSegundoBotao{
     background-color: transparent;
@@ -203,4 +227,7 @@ body{
 }
 .listaLink a:hover{
     color: var(--CorBotao);
+}
+.listaLink a:active{
+    color: var(--CorBotaoEfeito);
 }
